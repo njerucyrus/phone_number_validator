@@ -34,7 +34,7 @@ if __name__ == '__main__':
         clean_num = CleanPhoneNumber(number).validate_phone_number()
         clean_phone_list.append(clean_num)
     
-    print "\n".join(clean_phone_list)
+    print ",".join(clean_phone_list)
      
         
     
