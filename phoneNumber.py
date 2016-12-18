@@ -9,11 +9,11 @@ class CleanPhoneNumber():
         prefix = phone[0]
         length = len(phone_number)
     
-        if prefix == '0' and length== 10 and phone[1]== '7':
+        if prefix == '0' and length== 10:
             phone[0] = '+254'
             return "".join(phone)
 
-        elif prefix == '+' and length == 13  and phone[4] == '7':
+        elif prefix == '+' and length == 13 :
             return str(phone_number)
 
         elif length < 10 :
@@ -23,9 +23,19 @@ class CleanPhoneNumber():
             print 'invalid phone number'
 
 if __name__ == '__main__':
-    phone_number = raw_input('Enter phone number:\n')
-    obj = CleanPhoneNumber(phone_number).validate_phone_number()
-    print obj
+    """
+        testing the code with some test data
+
+    """
+    phone_list = ['0703191981','0703191981','0703191981','0703191981', '+254705777777']
+    clean_phone_list = []
+
+    for number in phone_list:
+        clean_num = CleanPhoneNumber(number).validate_phone_number()
+        clean_phone_list.append(clean_num)
+    
+    print "\n".join(clean_phone_list)
+     
         
     
             
