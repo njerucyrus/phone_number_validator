@@ -27,7 +27,7 @@ if __name__ == '__main__':
         testing the code with some test data
 
     """
-    phone_list = ['0703191981','0703191981','0703191981','0703191981', '+254705777777']
+    phone_list = ['YOUR LIST OF NUMBERS']
     clean_phone_list = []
 
     for number in phone_list:
